@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Golvana</title>
+  </head>
+  <body>
+    <h1>Welcome to Golvana...!</h1>
+    <button onclick="countNotifications()">New Notification</button>
+  </body>
+  <script>
+    let count = 0;
+    function countNotifications() {
+      count++;
+      let title = document.querySelector("title");
+      title.innerText = `Golvana (${count}) New Messages`;
+    }
+  </script>
+</html>

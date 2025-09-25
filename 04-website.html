@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learning Javascript</title>
+    <style>
+      body {
+        background-color: #23272e;
+        color: #fff;
+      }
+      /* Card design */
+      .container {
+        background-color: rgb(167, 228, 120);
+        color: #23272e;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 10px;
+        text-align: center;
+        width: 200px;
+        border-radius: 10px;
+        margin: 50px auto;
+        border: 1px solid rgb(255, 184, 97);
+      }
+      .container > h2 {
+        color: rgb(151, 106, 142);
+      }
+      .btn-style {
+        border: none;
+        padding: 5px 10px;
+        font-size: 1rem;
+        border-radius: 5px;
+        color: white;
+        cursor: pointer;
+      }
+      .btn-style:hover {
+        opacity: 0.8;
+      }
+      .btn1 {
+        background-color: green;
+      }
+      .btn2 {
+        background-color: gray;
+      }
+    </style>
+  </head>
+  <body>
+    <hr />
+    <div class="container">
+      <h2>Adults plain Cotton T-shirt</h2>
+      <h3>Price : $<span>7.99</span></h3>
+      <button class="btn-style btn1" onclick="alert('Item added successfully')">
+        Add to cart
+      </button>
+      <button class="btn-style btn2" onclick="console.log('Not now. Thanks!')">
+        Buy now
+      </button>
+    </div>
+    <hr />
+    <script></script>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Onkeyup</title>
+  </head>
+  <body>
+    <input type="text" class="js-input-field" onkeyup="livePressing()" />
+    <button class="js-submit-button">submit</button>
+    <h3 class="js-visible-area"></h3>
+    <script>
+      function livePressing() {
+        let inputField = document.querySelector(".js-input-field");
+        let visibleArea = document.querySelector(".js-visible-area");
+        if (inputField.value) {
+          visibleArea.textContent = inputField.value;
+        }
+      }
+    </script>
+  </body>
+</html>

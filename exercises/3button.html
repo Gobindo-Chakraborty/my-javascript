@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3 Buttons</title>
+    <style>
+      .btn {
+        background-color: black;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        font-size: 1.2rem;
+        cursor: pointer;
+      }
+      .btn:hover {
+        background-color: rgb(48, 48, 48);
+      }
+      .is-active {
+        background-color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="btn">Click me</button>
+    <button class="btn">Click me</button>
+    <button class="btn">Click me</button>
+    <script>
+      const btn = document.querySelectorAll(".btn");
+
+      btn.forEach(function (currentButton) {
+        currentButton.addEventListener("click", function () {
+          if (currentButton.classList.contains("is-active")) {
+            currentButton.classList.remove("is-active");
+          } else {
+            btn.forEach(function (everyButton) {
+              everyButton.classList.remove("is-active");
+              currentButton.classList.add("is-active");
+            });
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

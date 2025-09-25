@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Objects</title>
+  </head>
+  <body>
+    <script>
+      // const product = {
+      //   name: "socks",
+      //   price: 1090,
+      // };
+      // console.log(typeof product);
+      // console.log(product);
+      // console.log(product.name);
+      // console.log(product.price);
+
+      // product.name = "cotton socks";
+      // console.log(product);
+
+      // product.newProperty = false;
+      // console.log(product);
+
+      // delete product.newProperty;
+      // console.log(product);
+
+      // console.log(localStorage.getItem("message"));
+
+      // const product2 = {
+      //   name: "shirt",
+      //   "delivery-time": "1 day",
+      //   ratings: {
+      //     stars: 4.5,
+      //     count: 87,
+      //   },
+      //   fun: function function1() {
+      //     console.log("Functions inside an object.");
+      //   },
+      // };
+
+      // console.log(product2);
+      // console.log(product2.name);
+      // console.log(product2["delivery-time"]);
+      // console.log(product2.ratings.count);
+      // product2.fun();
+      // console.log(typeof Math.random);
+      // console.log(typeof JSON.stringify(product2));
+
+      // const jsonString = JSON.stringify(product2);
+      // console.log(JSON.parse(jsonString));
+
+      // localStorage.setItem("message", "Hello world");
+
+      console.log("Hello".length);
+      console.log("Hello".toUpperCase());
+
+      const object1 = {
+        message: "Good",
+        age: 18,
+        year: 2007,
+      };
+
+      const object2 = object1;
+
+      object1.message = "Not Good";
+
+      console.log(object1);
+      console.log(object2);
+
+      // const message = object1.message;
+      const { message, age, year } = object1;
+
+      console.log(message, age, year);
+
+      const object3 = {
+        // message: message,
+        message,
+        age,
+        year,
+        // method: function function1() {
+        //   console.log("My Method style.");
+        // },
+        method() {
+          console.log("My Method style.");
+        },
+      };
+
+      console.log(object3);
+      object3.method();
+
+      const object4 = {
+        price: 2095,
+      };
+
+      console.log(object4.price);
+
+      object4.price += 500;
+
+      console.log(object4.price.toString().repeat(3));
+    </script>
+  </body>
+</html>

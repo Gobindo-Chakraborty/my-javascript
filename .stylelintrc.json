@@ -1,0 +1,94 @@
+{
+  "extends": ["stylelint-config-standard"],
+  "plugins": ["stylelint-order"],
+  "rules": {
+    "order/properties-order": [
+      {
+        "groupName": "Layout (Flex & Grid)",
+        "properties": [
+          "display",
+          "flex",
+          "flex-direction",
+          "flex-wrap",
+          "justify-content",
+          "align-items",
+          "align-content",
+          "gap",
+          "grid",
+          "grid-area",
+          "grid-template",
+          "grid-template-areas",
+          "grid-template-rows",
+          "grid-template-columns",
+          "grid-row",
+          "grid-row-start",
+          "grid-row-end",
+          "grid-column",
+          "grid-column-start",
+          "grid-column-end",
+          "place-items",
+          "place-content",
+          "place-self"
+        ]
+      },
+      {
+        "groupName": "Box Model",
+        "properties": [
+          "margin",
+          "margin-top",
+          "margin-right",
+          "margin-bottom",
+          "margin-left",
+          "margin-inline",
+          "padding",
+          "padding-top",
+          "padding-right",
+          "padding-bottom",
+          "padding-left",
+          "width",
+          "min-width",
+          "max-width",
+          "height",
+          "min-height",
+          "max-height"
+        ]
+      },
+      {
+        "groupName": "Positioning",
+        "properties": ["position", "top", "right", "bottom", "left", "z-index"]
+      },
+      {
+        "groupName": "Typography",
+        "properties": [
+          "font",
+          "font-family",
+          "font-size",
+          "font-weight",
+          "line-height",
+          "letter-spacing",
+          "text-align",
+          "text-transform",
+          "color"
+        ]
+      },
+      {
+        "groupName": "Visual",
+        "properties": [
+          "border",
+          "border-top",
+          "border-right",
+          "border-bottom",
+          "border-left",
+          "border-radius",
+          "background",
+          "box-shadow",
+          "opacity",
+          "transition",
+          "transform"
+        ]
+      }
+    ],
+    "no-descending-specificity": null,
+    "selector-class-pattern": null
+  }
+}

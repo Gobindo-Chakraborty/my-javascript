@@ -1,0 +1,10 @@
+body {
+  font-family: Inter, sans-serif;
+  color: #eee;
+  background-color: #23272e;
+}
+
+a,
+button {
+  cursor: pointer;
+}

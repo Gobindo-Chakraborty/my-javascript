@@ -4,31 +4,61 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Booleans</title>
+    <link rel="stylesheet" href="./css/global.css" />
   </head>
   <body>
     <script>
-      true;
-      false;
+      // true;
+      // false;
 
-      console.log(typeof (3 > 5));
-      console.log(5 == 10 - 5.0);
+      // console.log(typeof (3 > 5));
+      // console.log(5 == 10 - 5.0);
 
-      if (true) {
-        console.log("hello");
-      } else {
-        console.log("else");
+      // if (true) {
+      //   console.log("hello");
+      // } else {
+      //   console.log("else");
+      // }
+
+      // const age = 15;
+
+      // if (age >= 18) {
+      //   console.log("You can drive");
+      //   console.log("Congrats");
+      // } else if (age >= 14) {
+      //   console.log("Almost there");
+      // } else {
+      //   console.log("You can not drive");
+      // }
+
+      // =============
+
+      if (undefined) {
+        console.log("truthy");
       }
 
-      const age = 15;
+      const cartQuantity = 5;
 
-      if (age >= 18) {
-        console.log("You can drive");
-        console.log("Congrats");
-      } else if (age >= 14) {
-        console.log("Almost there");
-      } else {
-        console.log("You can not drive");
+      if (cartQuantity) {
+        console.log("Cart has products");
       }
+
+      console.log(!0);
+      console.log("text" / 5);
+
+      const variable1 = undefined;
+      console.log(variable1);
+
+      const result = undefined ? "this is truthy" : " this is falsy";
+      console.log(result);
+
+      false && console.log("hello");
+
+      const message = 0 && "hello again";
+      console.log(message);
+
+      const currency = undefined || 0;
+      console.log(currency);
     </script>
   </body>
 </html>

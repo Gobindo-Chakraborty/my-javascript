@@ -8,3 +8,8 @@ a,
 button {
   cursor: pointer;
 }
+
+a {
+  color: #eee;
+  color: green;
+}

@@ -18,13 +18,38 @@
     <p>Amazon Shipping Calculator</p>
     <p>Orders under $40 = +$10 shipping.</p>
     <p>Orders over $40 = FREE shipping.</p>
-    <input type="text" placeholder="Type your budget" />
-    <button>Calculate</button>
+    <input
+      class="js-input"
+      type="number"
+      placeholder="Type your budget"
+      autofocus
+    />
+    <button class="js-calculate-btn">Calculate</button>
+    <p class="js-cost"></p>
     <br /><br /><br />
 
     <a href="#">CSS version of these projects</a>
 
     <script>
+      const inputElement = document.querySelector(".js-input");
+      const calcBtn = document.querySelector(".js-calculate-btn");
+      let costElement = document.querySelector(".js-cost");
+
+      inputElement.addEventListener("keydown", (event) => {
+        if (event.key === "Enter") {
+          calculateTax();
+        }
+      });
+      calcBtn.addEventListener("click", calculateTax);
+
+      function calculateTax() {
+        let cost = Number(inputElement.value);
+        if (cost < 40) {
+          cost += 10;
+        }
+        costElement.innerText = cost;
+      }
+
       function subscribe() {
         const subscribeBtn = document.querySelector(".js-subscribe-btn");
 

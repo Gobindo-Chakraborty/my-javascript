@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Projects</title>
+    <link rel="stylesheet" href="./css/global.css" />
+    <style>
+      .subscribe-btn {
+        border: none;
+        background-color: green;
+        color: white;
+        padding: 10px 15px;
+        border-radius: 50px;
+        font-weight: 700;
+        cursor: pointer;
+        margin-bottom: 30px;
+      }
+      .subscribe-btn:hover {
+        background-color: rgba(0, 128, 0, 0.664);
+      }
+      .is-subscribe {
+        background-color: white;
+        color: black;
+      }
+      .is-subscribe:hover {
+        background-color: rgb(224, 224, 224);
+      }
+
+      .cost-input {
+        font-size: 15px;
+        padding: 10px;
+      }
+      .cost-input:focus {
+        outline: 2px solid white;
+      }
+      .cost-btn {
+        font-size: 15px;
+        padding: 12px 15px;
+        background-color: green;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+      .cost-btn:active {
+        background-color: rgb(0, 97, 0);
+      }
+    </style>
+  </head>
+  <body>
+    <p>YouTube Subscribe Button</p>
+    <button class="js-subscribe-btn subscribe-btn" onclick="subscribe()">
+      Subscribe
+    </button>
+
+    <p>Rock Paper Scissors</p>
+    <a href="./09-rock-paper-scissors.html">Click here</a>
+    <br /><br />
+
+    <p>Amazon Shipping Calculator</p>
+    <p>Orders under $40 = +$10 shipping.</p>
+    <p>Orders over $40 = FREE shipping.</p>
+    <input
+      class="js-input cost-input"
+      type="number"
+      placeholder="Type your budget"
+      autofocus
+    />
+    <button class="js-calculate-btn cost-btn">Calculate</button>
+    <p class="js-cost"></p>
+    <br /><br /><br />
+
+    <p>Rock Paper Scissors</p>
+    <a href="./10-rock-paper-scissors.html">Click here</a>
+
+    <script>
+      const inputElement = document.querySelector(".js-input");
+      const calcBtn = document.querySelector(".js-calculate-btn");
+      let costElement = document.querySelector(".js-cost");
+
+      inputElement.addEventListener("keydown", (event) => {
+        if (event.key === "Enter") {
+          calculateTax();
+        }
+      });
+      calcBtn.addEventListener("click", calculateTax);
+
+      function calculateTax() {
+        let cost = Number(inputElement.value);
+        if (cost < 40) {
+          cost += 10;
+        }
+        costElement.innerText = cost;
+      }
+
+      function subscribe() {
+        const subscribeBtn = document.querySelector(".js-subscribe-btn");
+
+        if (subscribeBtn.innerText === "Subscribe") {
+          subscribeBtn.innerText = "Subscribed";
+          subscribeBtn.classList.add("is-subscribe");
+        } else {
+          subscribeBtn.innerText = "Subscribe";
+          subscribeBtn.classList.remove("is-subscribe");
+        }
+      }
+    </script>
+  </body>
+</html>

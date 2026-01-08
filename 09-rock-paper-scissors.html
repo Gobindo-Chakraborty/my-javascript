@@ -15,6 +15,9 @@
 
     <button onclick="playGame('scissors')">Scissors</button>
 
+    <p class="js-result"></p>
+    <p class="js-score"></p>
+
     <button id="reset-btn">Reset Score</button>
 
     <script>
@@ -23,6 +26,11 @@
         losses: 0,
         ties: 0,
       };
+
+      const resultField = document.querySelector(".js-result");
+      const scoreField = document.querySelector(".js-score");
+
+      showScore();
 
       function playGame(playerMove) {
         let computerMove = pickComputerMove();
@@ -36,7 +44,9 @@
           score.ties++;
         }
         localStorage.setItem("score", JSON.stringify(score));
-        showResult(playerMove, computerMove, result);
+
+        showResult(result, playerMove, computerMove);
+        showScore();
       }
 
       function pickComputerMove() {
@@ -69,10 +79,13 @@
         return result;
       }
 
-      function showResult(playerMove, computerMove, result) {
-        alert(
-          `You picked ${playerMove}. Computer picked ${computerMove}. ${result}\nWins: ${score.wins}, Losses: ${score.losses}, Tie: ${score.ties}`
-        );
+      function showResult(result, playerMove, computerMove) {
+        resultField.innerHTML = `${result}<br><br>
+        You ${playerMove}. Computer ${computerMove}.`;
+      }
+
+      function showScore() {
+        scoreField.innerHTML = `Wins: ${score.wins}, Losses: ${score.losses}, Tie: ${score.ties}`;
       }
 
       const resetBtn = document.querySelector("#reset-btn");
@@ -81,7 +94,8 @@
         score.losses = 0;
         score.ties = 0;
         localStorage.setItem("score", JSON.stringify(score));
-        console.log("Score Reset.");
+
+        showScore();
       });
     </script>
   </body>

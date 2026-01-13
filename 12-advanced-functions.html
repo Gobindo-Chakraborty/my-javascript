@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advanced Functions</title>
+    <link rel="stylesheet" href="./css/global.css" />
+  </head>
+  <body>
+    <script>
+      /*
+      function greetings() {
+        console.log("hello");
+      }
+      greetings();
+
+      const num = 2;
+      const function1 = function greetings() {
+        console.log("hello2");
+      };
+      function1();
+
+      const object1 = {
+        num: 2,
+        fun: function greeting() {
+          // regular function
+          console.log("hello3");
+        },
+        fun1() {
+          // object method
+          console.log("hello4");
+        },
+        fun2: function () {
+          // anonymous function
+          console.log("hello5");
+        },
+        fun3: () => {
+          // arrow function
+          console.log("hello6");
+        },
+      };
+      console.log(object1.num);
+      object1.fun();
+      object1.fun1();
+      object1.fun2();
+      object1.fun3();
+
+      function display(param) {
+        console.log(param);
+      }
+      display(100);
+
+      function run(param) {
+        param();
+      }
+      run(function () {
+        console.log(200);
+      });
+      */
+
+      /*
+      setTimeout(function () {
+        console.log("timeout");
+      }, 1000);
+      console.log("next line");
+
+      setInterval(function () {
+        console.log("interval");
+      }, 3000);
+      console.log("next line 2");
+      */
+      ["make dinenr", "wash dishes", "watch youtube"].forEach(
+        (value, index) => {
+          if (value === "wash dishes") {
+            return;
+          }
+          console.log(value, index);
+        }
+      ); // forEach is a function but if is  Conditional statement or keyword so if could use return if it is inside of forEach function. because function could use return;
+      // forEach -> if -> return
+
+      console.log("=============");
+
+      const taskArray = ["make dinenr", "wash dishes", "watch youtube"];
+      for (let i = 0; i < taskArray.length; i++) {
+        if (taskArray[i] === "wash dishes") {
+          continue;
+        }
+        console.log(taskArray[i], i);
+      } // for is a loop but if is conditional statement or keyword so if could use return if it is inside of for loop. because loop can use continue
+      // for -> if -> continue
+    </script>
+  </body>
+</html>

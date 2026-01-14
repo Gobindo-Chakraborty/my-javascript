@@ -7,7 +7,24 @@
     <link rel="stylesheet" href="./css/global.css" />
   </head>
   <body>
+    <button class="js-button">Click</button>
     <script>
+      /*
+      const buttonElement = document.querySelector(".js-button");
+
+      const eventListener1 = () => {
+        console.log("click");
+      };
+
+      const eventListener2 = () => {
+        console.log("click2");
+      };
+
+      buttonElement.addEventListener("click", eventListener1);
+      buttonElement.addEventListener("click", eventListener2);
+      buttonElement.removeEventListener("click", eventListener1);
+      */
+
       /*
       function greetings() {
         console.log("hello");
@@ -69,6 +86,7 @@
       }, 3000);
       console.log("next line 2");
       */
+      /*
       ["make dinenr", "wash dishes", "watch youtube"].forEach(
         (value, index) => {
           if (value === "wash dishes") {
@@ -89,6 +107,124 @@
         console.log(taskArray[i], i);
       } // for is a loop but if is conditional statement or keyword so if could use return if it is inside of for loop. because loop can use continue
       // for -> if -> continue
+      */
+      /*
+      const regularFunction = function (param, param2) {
+        console.log("hello");
+        return 5;
+      };
+      regularFunction();
+
+      const arrowFunction = (param) => {
+        console.log(param + 1);
+        return 5;
+      };
+      arrowFunction(2);
+
+      const oneLine = () => 2 + 3;
+      console.log(oneLine());
+
+      const object2 = {
+        method: () => {
+
+        },
+        method(){
+
+        }
+      }
+      */
+      /*
+      console.log([1, -3, 5]);
+
+      console.log(
+        [1, -3, 5].filter((value, index) => {
+          /*
+          if (value >= 0) {
+            return true;
+          } else {
+            return false;
+          }
+            */
+      /*
+          return value >= 0;
+        })
+      );
+
+      console.log(
+        [1, 1, 3].map((value, index) => {
+          return value * 2;
+        })
+      );
+      console.log([1, 1, 3].map((value) => value * 2));
+      */
+      const arr = [1, 1, -3, 2, 5];
+      console.log(`normal arr first : ${arr}`);
+
+      console.log(
+        "%cFor Loop",
+        "font-weight: bold; font-size: 24px; color: green;"
+      );
+
+      for (let i = 0; i < arr.length; i++) {
+        console.log("Loop For _ " + " Value : " + arr[i] + " Index " + i);
+        console.log(arr[i] * 2);
+      }
+
+      console.log(
+        "%cWhile Loop",
+        "font-weight: bold; font-size: 24px; color: green;"
+      );
+
+      let i = 0;
+      while (i < arr.length) {
+        console.log("While Loop _ " + " Value : " + arr[i] + " Index " + i);
+        console.log(arr[i] * 2);
+        i++;
+      }
+
+      console.log(
+        "%cDo While Loop",
+        "font-weight: bold; font-size: 24px; color: green;"
+      );
+
+      i = 0;
+      do {
+        console.log("Do While _ " + " Value : " + arr[i] + " Index " + i);
+        console.log(arr[i] * 2);
+        i++;
+      } while (i < arr.length);
+
+      console.log(
+        "%cForEach function",
+        "font-weight: bold; font-size: 24px; color: green;"
+      );
+
+      arr.forEach((value, index) => {
+        console.log("ForEach _ " + " Value : " + value + " Index " + index);
+        console.log(value * 2);
+      });
+
+      console.log(
+        "%cFilter function",
+        "font-weight: bold; font-size: 24px; color: green;"
+      );
+
+      arr.filter((value, index) => {
+        console.log("Filter _ " + " Value : " + value + " Index " + index);
+        console.log(value * 2);
+      });
+
+      console.log(
+        "%cMap function",
+        "font-weight: bold; font-size: 24px; color: green;"
+      );
+
+      arr.map((value, index) => {
+        console.log("Map _ " + " Value : " + value + " Index " + index);
+        console.log(value * 2);
+      });
+
+      console.log(`normal arr last : ${arr}`);
     </script>
   </body>
 </html>
